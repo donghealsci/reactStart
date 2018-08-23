@@ -1,0 +1,64 @@
+{
+  "env": {
+      "browser": true,
+      "es6": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "experimentalObjectRestSpread": true,
+          "jsx": true
+      },
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react"
+  ],
+  "rules": {
+      "indent": [
+         "error",
+         2,
+         {
+             "SwitchCase": 1,
+             "VariableDeclarator": 1,
+             "outerIIFEBody": 1,
+             // MemberExpression: null,
+             // CallExpression: {
+                 // parameters: null,
+             // },
+             "FunctionDeclaration": {
+                 "parameters": 1,
+                 "body": 1
+             },
+             "FunctionExpression": {
+                 "parameters": 1,
+                 "body": 1
+             }
+         }
+     ],
+      "quotes": [
+          "error",
+          "single"
+      ],
+      "no-var": [
+          "error"
+      ],
+      "prefer-const": [
+          "error", 
+          {
+              "destructuring": "any",
+              "ignoreReadBeforeAssign": true
+          }
+      ],
+      "semi": [
+          "error",
+          "never"
+      ],
+      "no-tabs":"off"
+  },
+  "settings": {
+      "react": {
+        "pragma": "React"
+      }
+  }
+}
