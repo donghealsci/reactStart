@@ -1,0 +1,8 @@
+/**
+ * this file defines all the actions related to the case browser
+*/
+export const LOAD_CASE_ABSTRACTS_REQUEST = 'LOAD_CASE_ABSTRACTS_REQUEST'
+export const LOAD_CASE_ABSTRACTS_SUCCESS = 'LOAD_CASE_ABSTRACTS_SUCCESS'
+export const LOAD_CASE_ABSTRACTS_ERROR = 'LOAD_CASE_ABSTRACTS_ERROR'
+
+export const UPDATE_CASE_ABSTRACTS = 'UPDATE_CASE_ABSTRACTS'

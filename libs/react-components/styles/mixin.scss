@@ -1,0 +1,71 @@
+@mixin prefix($property, $value) {
+    #{"-webkit-"+$property}: $value;
+    #{"-moz-"+$property}: $value;
+    #{"-ms-"+$property}: $value;
+    #{"-o-"+$property}: $value;
+    #{$property}: $value;
+}
+
+@mixin flexContainer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin debug($color) {
+    box-sizing: border-box;
+    border: 1px solid $color;
+}
+
+@mixin strech {
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin keyframes($a) {
+    @-o-keyframes #{$a} {
+        @content;
+    }
+    @-webkit-keyframes #{$a} {
+        @content;
+    }
+    @-moz-keyframes #{$a} {
+        @content;
+    }
+    @keyframes #{$a} {
+        @content;
+    }
+}
+
+@mixin animation($content) {
+    animation: $content;
+    -moz-animation: $content;
+    -webkit-animation: $content;
+     -o-animation: $content;
+}
+
+@mixin transform($content) {
+    transform: $content;
+    -moz-transform: $content;
+    -webkit-transform: $content;
+    -o-transform: $content;
+}
+
+@mixin transition($content) {
+    transition: $content;
+    -moz-transition: $content;
+    -webkit-transition: $content;
+    -o-transition: $content;
+}
+
+@mixin transform-origin($content) {
+    transform-origin: $content;
+    -moz-transform-origin: $content;
+    -webkit-transform-origin: $content;
+    -o-transform-origin: $content;
+}

@@ -1,0 +1,51 @@
+.avatar {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    line-height: 1;
+    border-radius: 500px;
+    white-space: nowrap;
+    font-weight: bold;
+    img {
+      border-radius: 500px;
+      width: 100%;
+    }
+}
+.logCon {
+  width: 400px;
+  height: 200px;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  margin-left: -200px;
+  top: 100px;
+  padding: 24px;
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  text-align: center;
+  .btnCon {
+    input {
+      color: #fff;
+      background-color: #1890ff;
+      border-color: #1890ff;
+      border-radius: 4px;
+      line-height: 1.5;
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 0 15px;
+      font-size: 14px;
+      border-radius: 4px;
+      height: 32px;
+      letter-spacing: 4px;
+      margin-right: 12px;
+    }
+  }
+}

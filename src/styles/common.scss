@@ -1,0 +1,80 @@
+//shared styles
+@import "./mixin.scss";
+@import "./theme.scss";
+@import "./size.scss";
+
+body {
+    margin: 0;
+}
+
+dialog {
+    border-style: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    background: $color-8;
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: $color-scroll; 
+    width: 6px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.navBar {
+    @include flexContainer;
+    @include prefix(align-items, center);
+    height: 100%;
+    .logo {
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 45px;
+        transform: rotateY(0deg);
+        cursor: pointer;
+    }
+    padding-right: 25px;
+    position: relative;
+    z-index: 10000;
+    .space {
+        @include prefix(flex-grow, 1);
+    }
+}
+
+.tileWall {
+    @include flexContainer;
+    @include prefix(flex-wrap, wrap);
+    width: 100%;
+    height: 100%;
+}
+
+.tile {
+    width: 270px;
+    height: 370px;
+    background-color: $color-8;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    .header {
+        width: 100%;
+        height: 200px;
+        background-color: blue;
+    }
+    .content {
+        width: 100%;
+        height: 130px;
+        padding: 20px 0 0 20px;
+        box-sizing: border-box;
+    }
+    .controls {
+        width: 100%;
+        height: 40px;
+        padding-left: 20px;
+    }
+
+}

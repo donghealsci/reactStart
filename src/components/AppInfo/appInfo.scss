@@ -1,0 +1,74 @@
+.wraper {
+  padding: 24px;
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  .editor{
+    text-align: left;
+  }
+  .fl {
+    float: left;
+  }
+  .ofh {
+    overflow: hidden;
+  }
+  .editorCon {
+    // width: 405px;
+    min-height:720px;
+    border: 1px solid #72706f;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .editorShowCon {
+    // width: 405px;
+    // margin-top: 183px;
+    padding: 15px;
+    margin-left: 36px;
+    height: 770px;
+    overflow-y: scroll;
+    border: 1px solid #72706f;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .row {
+    margin-bottom: 20px;
+    .title {
+        font-weight: bolder;
+        text-align: left;
+        height: 40px;
+        line-height: 40px;
+    }
+    .titleAdd {
+        font-weight: bolder;
+        text-align: right;
+        height: 40px;
+        line-height: 40px;
+    }
+    .content {
+        text-align: left;
+        line-height: 40px;
+    }
+    .TreeCon {
+        text-align: left;
+    }
+  }
+}
+.tbCon {
+  position: relative;
+  .spin {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate('-50%', '-50%');
+  }
+  .pageCon {
+    margin: 20px 0 10px 0;
+    padding-left: 50px;
+  }
+}
+.selectedRow {
+  background-color: rgba(124, 217, 240, 0.25);
+}

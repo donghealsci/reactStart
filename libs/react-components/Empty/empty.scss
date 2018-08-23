@@ -1,0 +1,19 @@
+@import "styles/theme.scss";
+
+.outer {
+    width: 100%;
+}
+
+.img {
+    background-image: url('./images/empty-large.png');
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+.hint {
+    margin-top: 14px;
+    font-size: $font-size-4;
+    color: $color-3;
+    width: 100%;
+    text-align: center;
+}
