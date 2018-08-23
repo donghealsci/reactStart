@@ -4,6 +4,7 @@ node_modules
 */npm-debug.log*
 */access.log
 *.log
+dist/
 */dist/[^.]*
 !*/dist/ico
 !*/dist/font
