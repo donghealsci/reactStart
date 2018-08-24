@@ -1,2 +1,5 @@
 # reactStart
 react 初始化项目
+# 关于publicPath
+注意publicPath
+在webpack的config文件中的publicPath中配置后，在根目录的index.html中的bundle.js中前也应该加上publicPath的配置内容

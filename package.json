@@ -1,14 +1,9 @@
 {
   "name": "setup",
   "scripts": {
-    "debugv4": "webpack-dev-server --config ./wp.cfg/webpack.config.debugv4.babel.js --host 0.0.0.0 --port 8020 --inline --progress --colors",
-    "start": "npm run debug",
-    "distOlder": "webpack --config ./wp.cfg/webpack.config.dist.babel.js  --progress --colors",
-    "dist": "webpack --config ./wp.cfg/webpack.config.distv4.babel.js  --progress --colors",
-    "devOlder": "NODE_ENV=dev webpack --config ./wp.cfg/webpack.config.dist.babel.js  --progress --colors",
-    "dev": "webpack --config ./wp.cfg/webpack.config.devv4.babel.js  --progress --colors",
     "debug": "webpack-dev-server --config ./wp.cfg/webpack.config.debugv4.babel.js --host 0.0.0.0 --port 8020 --inline --progress --colors",
-    "debug2": "webpack-dev-server --config ./wp.cfg/webpack.config.debug2.babel.js --host 0.0.0.0 --port 8020 --inline --progress --colors"
+    "start": "npm run debug",
+    "dist": "webpack --config ./wp.cfg/webpack.config.distv4.babel.js  --progress --colors"
   },
   "author": "Yang Yang",
   "standard": {
@@ -83,7 +78,6 @@
     "lodash": "^4.6.1",
     "moment": "^2.20.1",
     "npm": "^5.7.1",
-    "oidc-client": "^1.3.0",
     "prop-types": "^15.5.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

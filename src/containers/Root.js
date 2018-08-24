@@ -1,20 +1,15 @@
 import {connect} from 'react-redux'
 import Root from 'components/Root'
-import {getLeftMenu} from 'actions'
 
 const mapStateToProps = state => {
   return {
     firstNav: state.breadCrumb.firstNav,
-    secondNav: state.breadCrumb.secondNav,
-    menuList: state.menu.menuList
+    secondNav: state.breadCrumb.secondNav
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    getLeftMenu: () => {
-      dispatch(getLeftMenu())
-    }
   }
 }
 

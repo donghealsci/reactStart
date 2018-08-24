@@ -35,7 +35,7 @@ module.exports = {
   },
   output: {
     path: resolve(__dirname, '../dev'),
-    publicPath: '/setup/'
+    publicPath: ''
   },
 
   module: {

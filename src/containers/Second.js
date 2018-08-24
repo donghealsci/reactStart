@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import Index from 'components/Index'
+import Second from 'components/Second'
 import {setBreadCrumb} from 'actions'
 
 const mapStateToProps = state => {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index)
+export default connect(mapStateToProps, mapDispatchToProps)(Second)

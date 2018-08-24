@@ -9,7 +9,7 @@ const firstNav = (state = '首页', action) => {
   }
 }
 
-const secondNav = (state = '', action) => {
+const secondNav = (state = '二级面包屑', action) => {
   switch (action.type) {
     case 'setSecondNav':
       return action.payload || ''

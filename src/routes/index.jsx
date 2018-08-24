@@ -6,7 +6,7 @@ import 'whatwg-fetch'
 import {appLogger, userManager, wxShare} from 'utils'
 import {dateUtils} from 'hsjs'
 const logger = appLogger.getLogger('Routes')
-const rootPath = 'setup/index'
+const rootPath = '/'
 const {HOST} = globalConfig.default
 
 const handleLoadError = (path) => {
@@ -32,21 +32,21 @@ class SilentCallback extends React.Component {
 }
 
 class Routes extends React.Component {
-  skipWhenLogin (nextState, replace) {
-    if (nextState.location.pathname === `${rootPath}/callback`) {
-      const user = userManager.getUserSync()
-      if (user && user.profile && user.profile.sub) {
-        replace({
-          pathname: rootPath,
-          state: { nextPathname: nextState.location.pathname }
-        })
-      }
-    }
-  }
+  // skipWhenLogin (nextState, replace) {
+  //   if (nextState.location.pathname === `${rootPath}/callback`) {
+  //     const user = userManager.getUserSync()
+  //     if (user && user.profile && user.profile.sub) {
+  //       replace({
+  //         pathname: rootPath,
+  //         state: { nextPathname: nextState.location.pathname }
+  //       })
+  //     }
+  //   }
+  // }
   render () {
     return (
       <Router history={browserHistory}>
-        <Route path='/'>
+        <Route>
           <IndexRedirect to={`${rootPath}`} />
           <Route path={`${rootPath}`} getComponents={(nextState, cb) => {
             import(/* webpackChunkName: "root" */ 'containers/Root')
@@ -62,65 +62,16 @@ class Routes extends React.Component {
                               })
                               .catch(handleLoadError('/Index'))
             }} />
-            <Route path='client' getComponents={(nextState, cb) => {
-              import(/* webpackChunkName: "clientAdmin" */ 'containers/ClientAdmin')
+            <Route path='second' getComponents={(nextState, cb) => {
+              import(/* webpackChunkName: "second" */ 'containers/Second')
                             .then(module => {
                               cb(null, module.default)
                             })
-                            .catch(handleLoadError('/ClientAdmin'))
-            }} />
-            <Route path='user/userManage' getComponents={(nextState, cb) => {
-              import(/* webpackChunkName: "userAdmin" */ 'containers/UserAdmin')
-                            .then(module => {
-                              cb(null, module.default)
-                            })
-                            .catch(handleLoadError('/UserAdmin'))
-            }} />
-            <Route path='role/roleManage' getComponents={(nextState, cb) => {
-              import(/* webpackChunkName: "roleAdmin" */ 'containers/RoleAdmin')
-                            .then(module => {
-                              cb(null, module.default)
-                            })
-                            .catch(handleLoadError('/RoleAdmin'))
-            }} />
-            <Route path='app/appManage' getComponents={(nextState, cb) => {
-              import(/* webpackChunkName: "appAdmin" */ 'containers/AppAdmin')
-                            .then(module => {
-                              cb(null, module.default)
-                            })
-                            .catch(handleLoadError('/AppAdmin'))
-            }} />
-            <Route path='group/groupManage' getComponents={(nextState, cb) => {
-              import(/* webpackChunkName: "groupAdmin" */ 'containers/GroupAdmin')
-                            .then(module => {
-                              cb(null, module.default)
-                            })
-                            .catch(handleLoadError('/GroupAdmin'))
-            }} />
-            <Route path='personal/password' getComponents={(nextState, cb) => {
-              import(/* webpackChunkName: "modifyPassword" */ 'containers/ModifyPassword')
-                            .then(module => {
-                              cb(null, module.default)
-                            })
-                            .catch(handleLoadError('/ModifyPassword'))
-            }} />
-            <Route path='appinfo/appinfo' getComponents={(nextState, cb) => {
-              import(/* webpackChunkName: "appInfo" */ 'containers/AppInfo')
-                            .then(module => {
-                              cb(null, module.default)
-                            })
-                            .catch(handleLoadError('/AppInfo'))
-            }} />
-            <Route path='appinfo/column' getComponents={(nextState, cb) => {
-              import(/* webpackChunkName: "columnAdmin" */ 'containers/ColumnAdmin')
-                            .then(module => {
-                              cb(null, module.default)
-                            })
-                            .catch(handleLoadError('/ColumnAdmin'))
+                            .catch(handleLoadError('/SecondPage'))
             }} />
           </Route>
         </Route>
-        <Route path={`${rootPath}/silentcallback`} component={SilentCallback} />
+        {/* <Route path={`${rootPath}/silentcallback`} component={SilentCallback} /> */}
       </Router>
     )
   }
